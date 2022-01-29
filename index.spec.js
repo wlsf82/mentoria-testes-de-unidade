@@ -40,3 +40,14 @@ test('preco total maior ou igual a 100 recebe 5% de desconto', () => {
 
   expect(resultadoAtual).toBe(resultadoEsperado)
 })
+
+test('preco total maior ou igual a 250 recebe 10% de desconto', () => {
+  const resultadoAtual = calculaPrecoFinal([{
+    id: 1,
+    preco: 250,
+    quantidade: 1
+  }])
+  const resultadoEsperado = 250 * .9
+
+  expect(resultadoAtual).toBe(resultadoEsperado)
+})

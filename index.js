@@ -1,4 +1,9 @@
 module.exports = function(listaDeProdutos) {
-  if (listaDeProdutos.length === 0) return 0
-  return listaDeProdutos[0].preco * listaDeProdutos[0].quantidade
+  return listaDeProdutos
+    .map(produto => calculaPrecoProduto(produto))
+    .reduce((a, b) => a + b, 0)
+}
+
+function calculaPrecoProduto(produto) {
+  return produto.preco * produto.quantidade
 }

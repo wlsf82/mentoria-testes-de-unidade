@@ -18,29 +18,6 @@ test('lista com um produto retorna preco * quantidade', () => {
   expect(resultadoAtual).toBe(resultadoEsperado)
 })
 
-test('lista com mais de um produto retorna soma de (preco * quantidade) de cada produto', () => {
-  const resultadoAtual = calculaPrecoFinal([
-    {
-      id: 1,
-      preco: 90,
-      quantidade: 1
-    },
-    {
-      id: 2,
-      preco: 4,
-      quantidade: 2
-    },
-    {
-      id: 3,
-      preco: 1,
-      quantidade: 2
-    },
-  ])
-  const resultadoEsperado = 100
-
-  expect(resultadoAtual).toBe(resultadoEsperado)
-})
-
 test('preco total maior ou igual a 100 recebe 5% de desconto', () => {
   const resultadoAtual = calculaPrecoFinal([
     {
